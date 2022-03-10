@@ -1,8 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include "Graph.h"
+#include <vector>
 #include <windows.h>
+using namespace std;
+
 
 int main()
-{
+{ 
+   
+
     // create the window
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
 
@@ -19,7 +25,6 @@ int main()
         "INSTRUCTIONS:\n- TO START TYPE 'PLAY'\nGOAL:\n- DONT SHIT YOUR PANTS ";
     sf::Text IntroText(intro, pixelFont, 24);
 
-
     
 
     // run the program as long as the window is open
@@ -32,16 +37,8 @@ int main()
         {
             if (event.type == sf::Event::TextEntered)
             {
-                if (event.text.unicode != 8) // 8=backspace
-                {
-                    playerInput += event.text.unicode;
-                    playerText.setString(playerInput);
-                }
-                else
-                {
-                    playerInput.erase(playerInput.getSize() - 1,1);
-                    playerText.setString(playerInput);
-                }
+                playerInput += event.text.unicode;
+                playerText.setString(playerInput);
             }
             // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
