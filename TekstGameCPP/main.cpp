@@ -1,7 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include "Graph.h"
+#include <vector>
+#include <windows.h>
+using namespace std;
+
 
 int main()
-{
+{ 
+   
+
     // create the window
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
 
@@ -14,7 +21,7 @@ int main()
 
     sf::String playerInput;
     sf::Text playerText(playerInput, pixelFont, 24);
-    sf::String intro = "     DONT SHIT YOUR PANTS!\nA SURVIVAL HORRO ADVENTURE\n\n"
+    sf::String intro = "     DONT SHIT YOUR PANTS!\nA SURVIVAL HORROR ADVENTURE\n\n"
         "INSTRUCTIONS:\n- TO START TYPE 'PLAY'\nGOAL:\n- DONT SHIT YOUR PANTS ";
     sf::Text IntroText(intro, pixelFont, 24);
 
