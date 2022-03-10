@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <windows.h>
 
 int main()
 {
@@ -14,9 +15,10 @@ int main()
 
     sf::String playerInput;
     sf::Text playerText(playerInput, pixelFont, 24);
-    sf::String intro = "     DONT SHIT YOUR PANTS!\nA SURVIVAL HORRO ADVENTURE\n\n"
+    sf::String intro = "     DONT SHIT YOUR PANTS!\nA SURVIVAL HORROR ADVENTURE\n\n"
         "INSTRUCTIONS:\n- TO START TYPE 'PLAY'\nGOAL:\n- DONT SHIT YOUR PANTS ";
     sf::Text IntroText(intro, pixelFont, 24);
+
 
     
 
@@ -30,8 +32,16 @@ int main()
         {
             if (event.type == sf::Event::TextEntered)
             {
-                playerInput += event.text.unicode;
-                playerText.setString(playerInput);
+                if (event.text.unicode != 8) // 8=backspace
+                {
+                    playerInput += event.text.unicode;
+                    playerText.setString(playerInput);
+                }
+                else
+                {
+                    playerInput.erase(playerInput.getSize() - 1,1);
+                    playerText.setString(playerInput);
+                }
             }
             // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
