@@ -1,5 +1,7 @@
 #pragma once
 #include "Node.h"
+#ifndef Edge_Included
+#define Edge_Included
 template <class T>
 
 class Edge
@@ -21,18 +23,10 @@ private:
 
 public:
 
-	Node<T> From;
-
-	T getDataNodeFrom()
-	{
-		return From;
+	Edge(Node<T> from, Node<T> to) {
+		this->from = dataFrom;
+		this->to = dataTo;
 	}
 
-	Node<T> To;
-
-	T getDataNodeTo()
-	{
-		return To;
-	}
 };
-
+#endif

@@ -4,6 +4,7 @@
 #include "Node.h"
 #include <string>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 template <class T>
@@ -11,11 +12,17 @@ template <class T>
 class Graph
 {
 
-	
-
-public:
+private: 
 
 	vector<Node<string>> Nodes;
+	
+public:
+
+
+
+	vector<Node<string>> GetGraph() {
+		return Nodes;
+	}
 
 	void displayVector(vector<T>& v)
 	{
@@ -26,9 +33,14 @@ public:
 
 		cout << endl;
 	}
-	void AddNode(T data) {
+	void AddNode(T& data) {
 
 		Nodes.push_back(new Node<T>(data));
+	}
+
+	void AddDirectionalEdge(T& from, T& to) {
+
+	/*	Node<T> from = find(Nodes.begin(), Nodes.end(), item) != Nodes.end();*/
 	}
 };
 
