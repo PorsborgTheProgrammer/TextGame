@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include <string>
+#include "Node.h"
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -9,9 +11,11 @@ template <class T>
 class Graph
 {
 
-private: vector<T> vector1;
+	
+
 public:
 
+	vector<Node<string>> Nodes;
 
 	void displayVector(vector<T>& v)
 	{
@@ -19,9 +23,12 @@ public:
 		{
 			cout << v[i] << " ";
 		}
-		
+
 		cout << endl;
 	}
-};
+	void AddNode(T data) {
 
+		Nodes.push_back(new Node<T>(data));
+	}
+};
 

@@ -14,7 +14,7 @@ public:
 
 	T getData()
 	{
-		return T;
+		return data;
 	}
 };
 
