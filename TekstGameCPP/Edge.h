@@ -22,14 +22,14 @@ public:
 
 	T getDataNodeFrom()
 	{
-		return data;
+		return From;
 	}
 
 	Node<T> To;
 
 	T getDataNodeFrom()
 	{
-		return data;
+		return To;
 	}
 };
 
