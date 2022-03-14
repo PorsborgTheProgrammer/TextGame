@@ -6,14 +6,17 @@ class Edge
 {
 
 private:
-	void setNodeFrom(T d)
+
+	T dataFrom;
+	T dataTo;
+	void setNodeFrom(T from)
 	{
-		data = d;
+		from = dataFrom;
 	}
 
-	void setNodeTo(T d)
+	void setNodeTo(T to)
 	{
-		data = d;
+		to = dataTo;
 	}
 
 public:
@@ -27,7 +30,7 @@ public:
 
 	Node<T> To;
 
-	T getDataNodeFrom()
+	T getDataNodeTo()
 	{
 		return To;
 	}
