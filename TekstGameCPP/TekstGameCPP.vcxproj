@@ -145,22 +145,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoorState.cpp" />
     <ClCompile Include="IntroState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NewGameState.cpp" />
     <ClCompile Include="Page.cpp" />
     <ClCompile Include="PageElement.cpp" />
+    <ClCompile Include="PantsState.cpp" />
     <ClCompile Include="SpriteElement.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="TextElement.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoorState.h" />
     <ClInclude Include="IntroState.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="NewGameState.h" />
     <ClInclude Include="Page.h" />
     <ClInclude Include="PageElement.h" />
+    <ClInclude Include="PantsState.h" />
     <ClInclude Include="SpriteElement.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TextElement.h" />

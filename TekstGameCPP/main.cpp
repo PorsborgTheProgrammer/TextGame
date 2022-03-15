@@ -75,6 +75,7 @@ void HandleInput(sf::RenderWindow& window, sf::String& playerInput, sf::Text& pl
 
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter)
         {
+            State state = currentState.HandleInput(playerInput);
             currentState = currentState.HandleInput(playerInput);
             playerInput = "";
             playerText.setString(playerInput);
