@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include "Graph.h"
 #include <vector>
 #include <windows.h>
 #include "main.h"
