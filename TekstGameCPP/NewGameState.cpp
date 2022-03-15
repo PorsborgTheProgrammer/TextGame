@@ -5,7 +5,7 @@
 NewGameState::NewGameState()
 {
     std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/image.png"));
+    testElements.push_back(new SpriteElement("Assets/step1.png"));
     this->page = Page(testElements);
 }
 
