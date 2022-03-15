@@ -9,6 +9,8 @@ class Edge
 
 private:
 
+	//XD
+
 	T dataFrom;
 	T dataTo;
 	void setNodeFrom(T from)
