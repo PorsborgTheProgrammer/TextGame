@@ -4,9 +4,9 @@
 
 DoorState::DoorState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step2.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> doorElement;
+    doorElement.push_back(new SpriteElement("Assets/step2.png"));
+    this->page = Page(doorElement);
 }
 
 State DoorState::HandleInput(sf::String playerInput)
