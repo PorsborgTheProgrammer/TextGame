@@ -11,7 +11,7 @@ DoorState::DoorState()
 
 State DoorState::HandleInput(sf::String playerInput)
 {
-    if (playerInput == "PULL DOOR" || "OPEN DOOR")
+    if (playerInput == "TAKE OFF PANTS" || "UNZIP PANTS")
         return PantsState();
     return DoorState();
 }

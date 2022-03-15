@@ -1,6 +1,7 @@
 #include "NewGameState.h"
 #include "Page.h"
 #include "SpriteElement.h"
+#include "DoorState.h"
 
 NewGameState::NewGameState()
 {
@@ -11,5 +12,7 @@ NewGameState::NewGameState()
 
 State NewGameState::HandleInput(sf::String playerInput)
 {
-    return State();
+    if (playerInput == "PULL DOOR" || "OPEN DOOR")
+        return DoorState();
+    return NewGameState();
 }
