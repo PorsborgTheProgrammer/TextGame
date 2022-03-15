@@ -145,38 +145,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Edge.cpp" />
-    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="IntroState.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MetteSlette.cpp" />
     <ClCompile Include="NewGameState.cpp" />
-    <ClCompile Include="NicolaiCarryManden.cpp" />
-    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Page.cpp" />
     <ClCompile Include="PageElement.cpp" />
     <ClCompile Include="SpriteElement.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="TextElement.cpp" />
     <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Yeeto.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Edge.h" />
-    <ClInclude Include="Graph.h" />
     <ClInclude Include="IntroState.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="MetteSlette.h" />
     <ClInclude Include="NewGameState.h" />
-    <ClInclude Include="NicolaiCarryManden.h" />
-    <ClInclude Include="Node.h" />
     <ClInclude Include="Page.h" />
     <ClInclude Include="PageElement.h" />
     <ClInclude Include="SpriteElement.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="TextElement.h" />
     <ClInclude Include="Timer.h" />
-    <ClInclude Include="Yeeto.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include "Graph.h"
 #include <vector>
 #include <windows.h>
 #include "main.h"
@@ -8,6 +7,7 @@
 #include "State.h"
 #include "IntroState.h"
 #include "Timer.h"
+#include <string>
 
 using namespace std;
 
@@ -17,40 +17,50 @@ int main()
     // create the window
     sf::RenderWindow window(sf::VideoMode(511, 511), "My window");
 
-    // players input text
+    #pragma region PlayerInputField
+    // players input text field
     sf::Font pixelFont;
     pixelFont.loadFromFile("Assets/pixelFont.ttf");
     sf::String playerInput;
     int fontSize = 24;
     sf::Text playerText(playerInput, pixelFont, fontSize);
+    playerText.setPosition(20, 511 - (fontSize + 10));
     sf::Text inputMarker(">", pixelFont, fontSize);
+    inputMarker.setPosition(2, 511 - (fontSize + 10));
+    #pragma endregion PlayerInputField
+
+    //State
+    State* currentState = new IntroState();
 
     //Testing Shit
     Timer timer;
-    State* currentState = new IntroState();
+    sf::String time = "YEEET";
+    sf::Text timerText(time, pixelFont, fontSize);
+    timerText.setPosition(0, 0);
 
-    
-
+    timer.start();
     // run the program as long as the window is open
     while (window.isOpen())
     {
+        //Update Timer
+        auto str = std::to_string((int)timer.elapsedSeconds());
+        time = "Timer: " + str;
+        timerText.setString(time);
+
         HandleInput(window, playerInput, playerText, *currentState);
         // clear the window with black color
         window.clear(sf::Color::Black);
 
-        // draw everything here...
-        // window.draw(...);
+        // draw everything here...window.draw(...);
+        window.draw(timerText);
         currentState->page.Render(window);
-
-        playerText.setPosition(20, 511-(fontSize + 10));
-        window.draw(playerText);
-        inputMarker.setPosition(2, 511 - (fontSize + 10));
         window.draw(inputMarker);
+        window.draw(playerText);
 
         // end the current frame
         window.display();
     }
-
+    timer.stop();
     return 0;
 }
 
