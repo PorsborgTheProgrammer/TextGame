@@ -4,9 +4,9 @@
 
 WinnerState::WinnerState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step5.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> winnerElement;
+    winnerElement.push_back(new SpriteElement("Assets/step5.png"));
+    this->page = Page(winnerElement);
 }
 
 State WinnerState::HandleInput(sf::String playerInput)

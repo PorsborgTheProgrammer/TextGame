@@ -5,14 +5,14 @@
 
 NewGameState::NewGameState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step1.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> newGameElement;
+    newGameElement.push_back(new SpriteElement("Assets/step1.png"));
+    this->page = Page(newGameElement);
 }
 
 State NewGameState::HandleInput(sf::String playerInput)
 {
-    if (playerInput == "PULL DOOR" || "OPEN DOOR")
+    if (playerInput == "PULL DOOR")
         return DoorState();
     return NewGameState();
 }

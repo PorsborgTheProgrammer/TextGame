@@ -4,9 +4,9 @@
 
 PantsState::PantsState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step3.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> pantsElement;
+    pantsElement.push_back(new SpriteElement("Assets/step3.png"));
+    this->page = Page(pantsElement);
 }
 
 State PantsState::HandleInput(sf::String playerInput)

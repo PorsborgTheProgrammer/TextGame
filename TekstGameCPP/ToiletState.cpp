@@ -4,9 +4,9 @@
 
 ToiletState::ToiletState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step4.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> toiletElement;
+    toiletElement.push_back(new SpriteElement("Assets/step4.png"));
+    this->page = Page(toiletElement);
 }
 
 State ToiletState::HandleInput(sf::String playerInput)

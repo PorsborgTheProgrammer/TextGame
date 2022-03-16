@@ -3,9 +3,9 @@
 #include "NewGameState.h"
 LoserState::LoserState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/lose.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> loserElement;
+    loserElement.push_back(new SpriteElement("Assets/lose.png"));
+    this->page = Page(loserElement);
 }
 
 State LoserState::HandleInput(sf::String playerInput)
