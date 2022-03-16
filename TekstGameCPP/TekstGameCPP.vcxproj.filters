@@ -51,7 +51,7 @@
     <ClCompile Include="LoserState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DoorState.cpp">
+    <ClCompile Include="DoorState2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,7 +92,7 @@
     <ClInclude Include="LoserState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DoorState.h">
+    <ClInclude Include="DoorState2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
