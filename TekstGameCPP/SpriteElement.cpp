@@ -2,6 +2,7 @@
 
 void SpriteElement::Render(sf::RenderWindow& window)
 {
+	this->sprite.setPosition(0, 30);
 	window.draw(this->sprite);
 }
 

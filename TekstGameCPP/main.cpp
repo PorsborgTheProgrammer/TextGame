@@ -8,6 +8,7 @@
 #include "IntroState.h"
 #include "Timer.h"
 #include <string>
+#include "LoserState.h"
 
 using namespace std;
 
@@ -30,22 +31,45 @@ int main()
     inputMarker.setPosition(2, 511 - (fontSize + 10));
     #pragma endregion PlayerInputField
 
-    //State
-
     //Testing Shit
+    int TimeToShit = 30;
+    bool isTimerOn = false;
     Timer timer;
-    sf::String time = "YEEET";
+    sf::String time = "";
     sf::Text timerText(time, pixelFont, fontSize);
     timerText.setPosition(0, 0);
 
-    timer.start();
     // run the program as long as the window is open
     while (window.isOpen())
     {
         //Update Timer
-        auto str = std::to_string((int)timer.elapsedSeconds());
-        time = "Timer: " + str;
-        timerText.setString(time);
+        if (typeid(*currentState) != typeid(IntroState))
+        {
+            isTimerOn = true;
+        }
+        if (isTimerOn == true && !timer.isRunning)
+        {
+            timer.start();
+        }
+        else if(isTimerOn == true)
+        {
+            auto str = std::to_string(TimeToShit - (int)timer.elapsedSeconds());
+            time = "Timer: " + str;
+            timerText.setString(time);
+        }
+        else if(timer.isRunning)
+        {
+            timer.stop();
+            time = "";
+            timerText.setString("");
+        }
+
+        //see if shit pants
+        if (TimeToShit - (int)timer.elapsedSeconds() <= 0)
+        {
+            isTimerOn = false;
+            currentState = new LoserState();
+        }
 
         HandleInput(window, playerInput, playerText);
         // clear the window with black color
@@ -60,7 +84,7 @@ int main()
         // end the current frame
         window.display();
     }
-    timer.stop();
+    
     return 0;
 }
 
