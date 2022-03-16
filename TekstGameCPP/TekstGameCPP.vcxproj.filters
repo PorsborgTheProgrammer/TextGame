@@ -51,6 +51,12 @@
     <ClCompile Include="LoserState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PantsState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorState2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Page.h">
@@ -87,6 +93,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LoserState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PantsState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorState2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

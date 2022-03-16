@@ -7,6 +7,7 @@ WinnerState::WinnerState()
     std::vector<PageElement*> winnerElement;
     winnerElement.push_back(new SpriteElement("Assets/step5.png"));
     this->page = Page(winnerElement);
+    this->stateName = "WinnerState";
 }
 
 State* WinnerState::HandleInput(sf::String playerInput)
