@@ -9,9 +9,9 @@ PantsState::PantsState()
     this->page = Page(pantsElement);
 }
 
-State PantsState::HandleInput(sf::String playerInput)
+State* PantsState::HandleInput(sf::String playerInput)
 {
     if (playerInput == "GO TO TOILET" || "SIT ON TOILET")
-        return ToiletState();
-    return PantsState();
+        return new ToiletState();
+    return new PantsState();
 }
