@@ -4,6 +4,6 @@ class PantsState : public State
 {
 public:
 	PantsState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput);
 };
 

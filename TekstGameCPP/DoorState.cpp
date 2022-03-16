@@ -9,9 +9,9 @@ DoorState::DoorState()
     this->page = Page(doorElement);
 }
 
-State DoorState::HandleInput(sf::String playerInput)
+State* DoorState::HandleInput(sf::String playerInput)
 {
     if (playerInput == "TAKE OFF PANTS" || "UNZIP PANTS")
-        return PantsState();
-    return DoorState();
+        return new PantsState();
+    return new DoorState();
 }

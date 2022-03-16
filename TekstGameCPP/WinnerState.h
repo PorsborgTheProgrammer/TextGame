@@ -4,6 +4,6 @@ class WinnerState : public State
 {
 public:
 	WinnerState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput);
 };
 

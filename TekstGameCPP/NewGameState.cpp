@@ -2,19 +2,21 @@
 #include "Page.h"
 #include "SpriteElement.h"
 #include "IntroState.h"
+#include "DoorState.h"
 
 NewGameState::NewGameState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step1.png"));
-    this->page = Page(testElements);
-    this->stateName = "NewGameState";
+	std::vector<PageElement*> testElements;
+	testElements.push_back(new SpriteElement("Assets/step1.png"));
+	this->page = Page(testElements);
+	this->stateName = "NewGameState";
 }
 
 State* NewGameState::HandleInput(sf::String playerInput)
 {
-    if (playerInput == "BACK")
-        return new IntroState();
+	if (playerInput == "PULL DOOR")
+		return new DoorState();
 
-    return new NewGameState();
+	return new NewGameState();
+
 }

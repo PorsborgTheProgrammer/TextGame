@@ -9,9 +9,9 @@ ToiletState::ToiletState()
     this->page = Page(toiletElement);
 }
 
-State ToiletState::HandleInput(sf::String playerInput)
+State* ToiletState::HandleInput(sf::String playerInput)
 {
     if (playerInput == "POO" || "SHIT")
-        return WinnerState();
-    return ToiletState();
+        return new WinnerState();
+    return new ToiletState();
 }

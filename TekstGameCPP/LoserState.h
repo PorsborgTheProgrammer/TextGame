@@ -4,6 +4,6 @@ class LoserState : public State
 {
 public:
 	LoserState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput);
 };
 

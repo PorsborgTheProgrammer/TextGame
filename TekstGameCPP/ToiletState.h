@@ -4,6 +4,6 @@ class ToiletState : public State
 {
 public:
 	ToiletState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput);
 };
 

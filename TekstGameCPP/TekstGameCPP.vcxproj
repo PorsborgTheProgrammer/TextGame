@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoorState.cpp" />
     <ClCompile Include="IntroState.cpp" />
     <ClCompile Include="LoserState.cpp" />
     <ClCompile Include="main.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="WinnerState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoorState.h" />
     <ClInclude Include="IntroState.h" />
     <ClInclude Include="LoserState.h" />
     <ClInclude Include="main.h" />

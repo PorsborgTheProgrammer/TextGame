@@ -8,11 +8,11 @@ LoserState::LoserState()
     this->page = Page(loserElement);
 }
 
-State LoserState::HandleInput(sf::String playerInput)
+State* LoserState::HandleInput(sf::String playerInput)
 {
     if (playerInput == "PLAY AGAIN" || "PLAY")
     {
-        return NewGameState();
+        return new NewGameState();
     }
-    return LoserState();
+    return new LoserState();
 }

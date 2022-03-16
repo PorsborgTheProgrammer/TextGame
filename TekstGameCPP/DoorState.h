@@ -5,6 +5,6 @@ class DoorState : public State
 {
 public:
 	DoorState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput);
 };
 

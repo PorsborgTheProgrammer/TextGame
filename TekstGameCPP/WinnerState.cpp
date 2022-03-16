@@ -9,11 +9,11 @@ WinnerState::WinnerState()
     this->page = Page(winnerElement);
 }
 
-State WinnerState::HandleInput(sf::String playerInput)
+State* WinnerState::HandleInput(sf::String playerInput)
 {
     if (playerInput == "PLAY AGAIN" || "PLAY")
     {
-        return NewGameState();
+        return new NewGameState();
     }
-    return WinnerState();
+    return new WinnerState();
 }
