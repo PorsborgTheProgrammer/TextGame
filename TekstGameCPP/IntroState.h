@@ -4,6 +4,6 @@ class IntroState : public State
 {
 public:
 	IntroState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput) override;
 };
 

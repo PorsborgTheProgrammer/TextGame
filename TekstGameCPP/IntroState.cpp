@@ -11,13 +11,18 @@ IntroState::IntroState()
     std::vector<PageElement*> testElements;
     testElements.push_back(new TextElement(intro));
     this->page = Page(testElements);
+    this->stateName = "IntroState";
 }
 
-State IntroState::HandleInput(sf::String playerInput)
+State* IntroState::HandleInput(sf::String playerInput)
 {
+    std::string str = playerInput;
     if (playerInput == "PLAY")
-        return NewGameState();
+        return new NewGameState();
 
-    return IntroState();
+    if (playerInput == "YEET")
+        return new NewGameState();
+
+    return new IntroState();
 }
 

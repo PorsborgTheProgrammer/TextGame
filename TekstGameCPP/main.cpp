@@ -11,6 +11,7 @@
 
 using namespace std;
 
+State* currentState = new IntroState();
 
 int main()
 { 
@@ -30,7 +31,6 @@ int main()
     #pragma endregion PlayerInputField
 
     //State
-    State* currentState = new IntroState();
 
     //Testing Shit
     Timer timer;
@@ -47,7 +47,7 @@ int main()
         time = "Timer: " + str;
         timerText.setString(time);
 
-        HandleInput(window, playerInput, playerText, *currentState);
+        HandleInput(window, playerInput, playerText);
         // clear the window with black color
         window.clear(sf::Color::Black);
 
@@ -64,20 +64,20 @@ int main()
     return 0;
 }
 
-void HandleInput(sf::RenderWindow& window, sf::String& playerInput, sf::Text& playerText, State& currentState)
+void HandleInput(sf::RenderWindow& window, sf::String& playerInput, sf::Text& playerText)
 {
     sf::Event event;
     while (window.pollEvent(event))
     {
-        if (event.type == sf::Event::TextEntered && event.key.code != sf::Keyboard::Backspace)
+        if (event.type == sf::Event::TextEntered && event.key.code != sf::Keyboard::Enter)
         {
-            if (event.text.unicode != 8)
+            if (event.text.unicode != 8 && event.text.unicode != '\r')
             {
                 sf::String str = event.text.unicode;
                 playerInput += str;
                 playerText.setString(playerInput);
             }
-            else if(playerInput.getSize() > 0)
+            else if(playerInput.getSize() > 0 && event.text.unicode != '\r')
             {
                 playerInput.erase(playerInput.getSize() - 1, 2);
                 playerText.setString(playerInput);
@@ -86,8 +86,7 @@ void HandleInput(sf::RenderWindow& window, sf::String& playerInput, sf::Text& pl
 
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter)
         {
-            State state = currentState.HandleInput(playerInput);
-            currentState = currentState.HandleInput(playerInput);
+            currentState = currentState->HandleInput(playerInput);
             playerInput = "";
             playerText.setString(playerInput);
         }

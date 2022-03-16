@@ -5,6 +5,6 @@ class NewGameState : public State
 {
 public:
 	NewGameState();
-	State HandleInput(sf::String playerInput);
+	State* HandleInput(sf::String playerInput) override;
 };
 
