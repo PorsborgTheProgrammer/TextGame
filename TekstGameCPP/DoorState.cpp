@@ -4,14 +4,14 @@
 
 DoorState::DoorState()
 {
-    std::vector<PageElement*> testElements;
-    testElements.push_back(new SpriteElement("Assets/step2.png"));
-    this->page = Page(testElements);
+    std::vector<PageElement*> doorElement;
+    doorElement.push_back(new SpriteElement("Assets/step2.png"));
+    this->page = Page(doorElement);
 }
 
 State DoorState::HandleInput(sf::String playerInput)
 {
-    if (playerInput == "PULL DOOR" || "OPEN DOOR")
+    if (playerInput == "TAKE OFF PANTS" || "UNZIP PANTS")
         return PantsState();
     return DoorState();
 }

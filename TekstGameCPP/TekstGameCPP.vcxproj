@@ -146,6 +146,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="IntroState.cpp" />
+    <ClCompile Include="LoserState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NewGameState.cpp" />
     <ClCompile Include="Page.cpp" />
@@ -154,9 +155,12 @@
     <ClCompile Include="State.cpp" />
     <ClCompile Include="TextElement.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="ToiletState.cpp" />
+    <ClCompile Include="WinnerState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IntroState.h" />
+    <ClInclude Include="LoserState.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="NewGameState.h" />
     <ClInclude Include="Page.h" />
@@ -165,6 +169,8 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="TextElement.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="ToiletState.h" />
+    <ClInclude Include="WinnerState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
